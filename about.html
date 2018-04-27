@@ -6,3 +6,6 @@ team:
     position: Position
 ---
 
+{% for beer in page.team %}
+{{ beer.name }}<br>
+{% endfor %}
