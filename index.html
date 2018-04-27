@@ -3,14 +3,22 @@ layout: default
 title: What's On Tap Test
 ---
 
-<h1>What's On Tap</h1>
+<h1>What's On Tap</h1> ( tied to site config )
 {% for elixir in site.whatsontap %}
 <h3>{{ elixir.name }}</h3>
 {% endfor %}
 
 <hr>
+
+<h1>Posts</h1>( tied to netlify )
 {% for post in site.posts %}
 	{{ post.title }}
 	{{ post.rating }}
-	<hr>
+	<br>
+{% endfor %}
+<hr>
+
+<h1>Pages</h1>( tied to netlify )
+{% for page in site.pages %}
+<a href="{{ page.url ">{{ page.title }}</a><br>
 {% endfor %}
