@@ -17,12 +17,12 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - label: "Pages"
+- label: "Pages"
   name: "pages"
   files:
-    - label: "Test Page"
-      name: "test"
-      file: "site/test/index.html"
+    - label: "About Page"
+      name: "about"
+      file: "site/test.html"
       fields:
         - {label: Title, name: title, widget: string}
         - {label: Intro, name: intro, widget: markdown}
@@ -33,3 +33,4 @@ collections:
             - {label: Name, name: name, widget: string}
             - {label: Position, name: position, widget: string}
             - {label: Photo, name: photo, widget: image}
+  
