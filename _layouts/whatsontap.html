@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
-{% for beer in team %}
+<h2>Whats On Tap?</h2>
+{% for beer in page.team %}
 {{ beer.name }} - {{ beer.position }}<br>
 {% endfor %}
