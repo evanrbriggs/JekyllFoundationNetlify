@@ -22,7 +22,7 @@ collections:
     files:
       - label: "About Page"
         name: "about"
-        file: "site/test/index.yml"
+        file: "site/test.yml"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
