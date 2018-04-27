@@ -1,3 +1,35 @@
-
-Beer name<br>
-
+<!doctype html>
+<html class="no-lib/js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2018042702</title>
+    <link rel="stylesheet" href="/lib/css/foundation.css">
+    <link rel="stylesheet" href="/lib/css/app.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <div style="background: white; position: fixed; bottom: 0; right: 0; padding: 5px; z-index: 5">This page is using <strong>whatsontap.html</strong> as a layout</div>
+    <div class="row align-middle">
+      <div class="large-12 columns">
+        
+      </div>
+    </div>
+    <script src="/lib/js/vendor/jquery.js"></script>
+    <script src="/lib/js/vendor/what-input.js"></script>
+    <script src="/lib/js/vendor/foundation.js"></script>
+    <script src="/lib/js/app.js"></script>
+    <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  </body>
+</html>
