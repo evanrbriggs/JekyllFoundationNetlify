@@ -7,3 +7,8 @@ title: What's On Tap Test
 {% for elixir in site.whatsontap %}
 <h3>{{ elixir.name }}</h3>
 {% endfor %}
+
+<hr>
+{% for post in site.posts %}
+{{ post.title }}
+{% endfor %}
