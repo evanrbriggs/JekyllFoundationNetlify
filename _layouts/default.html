@@ -7,6 +7,7 @@
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="/lib/css/foundation.css">
     <link rel="stylesheet" href="/lib/css/app.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <div class="grid-container">
@@ -20,5 +21,16 @@
     <script src="/lib/js/vendor/what-input.js"></script>
     <script src="/lib/js/vendor/foundation.js"></script>
     <script src="/lib/js/app.js"></script>
+    <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
   </body>
 </html>
