@@ -2,7 +2,6 @@ author: Evan Briggs
 email: evan.briggs@magichat.net
 title: Magic Hat Brewing Company
 url: "https://magichat.net"
-markdown: rdiscount
 include: [ _redirects]
 whatsontap:
   - name: "9"
