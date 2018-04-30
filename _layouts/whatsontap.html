@@ -14,7 +14,7 @@ layout: default
 
 {% for elixir in page.elixirs %}
 
-	{% if elixir.pouring == true %}
+	{% if elixir.boolean == true %}
 
 	<div class="row">
 		<div class="large-7 medium-6 small-6 columns">
@@ -27,7 +27,7 @@ layout: default
 		<div class="large-2 medium-2 small-2 columns"><h2>{{ elixir.ibu }}</h2></div>
 		<div class="large-1 medium-2 small-2 columns"><h2>{{ elixir.srm }}</h2></div>
 	</div>
-	
+
 	{% endif %}
 
 {% endfor %}

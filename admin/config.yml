@@ -40,4 +40,4 @@ collections:
               - {label: Elixir IBU, name: ibu, widget: string}
               - {label: Elixir SRM, name: srm, widget: string}
               - {label: Elixir Label, name: label, widget: image}
-              - {label: "Currently Pouring?", name: "pouring", widget: "boolean"}
+              - {label: "Currently Pouring?", name: "pouring", widget: "boolean", default: true}
