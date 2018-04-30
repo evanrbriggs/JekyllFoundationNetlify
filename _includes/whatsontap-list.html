@@ -1,0 +1,11 @@
+{% for page in site.pages %}
+  {% if page.layout == 'whatsontap' %}
+    {% for elixir in page.elixirs %}
+      {% if elixir.pouring == true %}
+
+      {{ elixir.name }}
+
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}

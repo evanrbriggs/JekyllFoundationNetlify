@@ -18,10 +18,16 @@ title: Netlify Jekyll CMS
 
 		{% for elixir in page.elixirs %}
 
+
 			<a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}"><img src="https://magichat.net/img/elixirs/labels/{{ elixir.name | slugify | remove: '-' }}.png"></a><br>
+
 
 		{% endfor %}
 
 	{% endif %}
 
 {% endfor %}
+
+<hr>
+
+{% include whatsontap-list.html %}
