@@ -3,35 +3,25 @@ layout: default
 title: Netlify Jekyll CMS
 ---
 
-<h3>What's On Tap <small>( tied to site config )</small></h3> 
+<h3>What's On Tap <small>( tied to <code>_config.yml</code> )</small></h3> 
 {% for elixir in site.whatsontap %}
-{{ elixir.name }}<br>
+<a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}">{{ elixir.name }}</a><br>
 {% endfor %}
 
 <hr>
 
-<h3>Posts <small>( tied to netlify blog post )</small></h3>
-{% for post in site.posts %}
-	<a href="{{ post.url }}">{{ post.title }}</a>
-	With a Rating of <strong>{{ post.rating }}</strong>
-	<br>
-{% endfor %}
-<hr>
+<h3>What's On Tap <small>( tied to <code>whatsontap.html</code> yaml )</small></h3>
 
-<h3>Pages <small>( tied to netlify pages )</small></h3>
 {% for page in site.pages %}
-<a href="{{ page.url }}">{{ page.title }}</a><br>
-{% endfor %}
 
-<hr>
-
-<h3>Pulled from the <a href="/about/">Whats On Tap?</a> page</h3>
-{% for page in site.pages %}
 	{% if page.layout == 'whatsontap' %}
 
-	{% for beer in page.team %}
-		{{ beer.name }} - {{ beer.position }}<br>
-	{% endfor %}
+		{% for elixir in page.elixirs %}
+
+			<a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}"><img src="https://magichat.net/img/elixirs/labels/{{ elixir.name | slugify | remove: '-' }}.png"></a><br>
+
+		{% endfor %}
 
 	{% endif %}
+
 {% endfor %}

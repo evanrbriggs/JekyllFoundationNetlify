@@ -19,19 +19,22 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Pages"
     name: "pages"
-    create: true # Allow users to create new documents in this collection
+    #create: true # Allow users to create new documents in this collection
     files:
-      - label: "About Page"
+      - label: "Whats On Tap"
         name: "about"
         file: "about.html"
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: "whatsontap"}
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
+          - label: elixirs
+            name: elixirs
             widget: list
             fields:
               - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
+              - {label: Tag, name: tag, widget: string}
+              - {label: Label, name: label, widget: image}
+              - {label: ABV, name: abv, widget: string}
+              - {label: IBU, name: ibu, widget: string}
+              - {label: SRM, name: srm, widget: string}

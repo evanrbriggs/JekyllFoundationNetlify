@@ -2,6 +2,19 @@
 layout: default
 ---
 <h2>Whats On Tap?</h2>
-{% for beer in page.team %}
-{{ beer.name }} - {{ beer.position }}<br>
+{% for elixir in page.elixirs %}
+
+<div class="row">
+	<div class="large-7 medium-6 small-6 columns">
+        <a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}/">
+        	<img src="https://magichat.net/img/elixirs/labels/{{ elixir.name | slugify | remove: '-' }}.png">
+        </a>
+		<h2><a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}/">{{ elixir.name }}</a></h2>
+		<h3><a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}/">{{ elixir.tag }}</a></h3>
+	</div>
+	<div class="large-2 medium-2 small-2 columns"><h2>{{ elixir.abv }}</h2></div>
+	<div class="large-2 medium-2 small-2 columns"><h2>{{ elixir.ibu }}</h2></div>
+	<div class="large-1 medium-2 small-2 columns"><h2>{{ elixir.srm }}</h2></div>
+</div>
+
 {% endfor %}
