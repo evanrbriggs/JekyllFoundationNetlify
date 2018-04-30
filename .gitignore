@@ -11,7 +11,9 @@ coop
 
 # Jekyll
 /_site/
+/_site
 _site/
+_site
 .sass-cache
 .jekyll-metadata
 .users.yml
