@@ -21,7 +21,6 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Pages"
     name: "pages"
-    create: true # Allow users to create new documents in this collection
     files:
       - label: "Whats On Tap"
         name: "about"
@@ -41,3 +40,5 @@ collections:
               - {label: Elixir SRM, name: srm, widget: string}
               - {label: Elixir Label, name: label, widget: image}
               - {label: "Currently Pouring?", name: "pouring", widget: "boolean", default: true}
+
+# Blog for MH events?

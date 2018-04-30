@@ -40,3 +40,5 @@ collections:
               - {label: Elixir SRM, name: srm, widget: string}
               - {label: Elixir Label, name: label, widget: image}
               - {label: "Currently Pouring?", name: "pouring", widget: "boolean", default: true}
+
+# Blog for MH events?

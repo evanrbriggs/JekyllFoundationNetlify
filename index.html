@@ -3,13 +3,6 @@ layout: default
 title: Netlify Jekyll CMS
 ---
 
-<h3>What's On Tap <small>( tied to <code>_config.yml</code> )</small></h3> 
-{% for elixir in site.whatsontap %}
-<a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}">{{ elixir.name }}</a><br>
-{% endfor %}
-
-<hr>
-
 <h3>What's On Tap <small>( tied to <code>whatsontap.html</code> yaml )</small></h3>
 
 {% for page in site.pages %}
@@ -28,6 +21,6 @@ title: Netlify Jekyll CMS
 
 {% endfor %}
 
-<hr>
 
-{% include whatsontap-list.html %}
+
+

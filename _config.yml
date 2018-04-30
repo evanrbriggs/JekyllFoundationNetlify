@@ -3,22 +3,3 @@ email: evan.briggs@magichat.net
 title: Magic Hat Brewing Company
 url: "https://magichat.net"
 include: [ _redirects]
-whatsontap:
-  - name: Circus Boy
-    tag: The Hefeweizen
-    abv: 4.5
-    ibu: 15
-    srm: 6
-    untappd:
-  - name: Zirkus Boy
-    tag: The Hefeweizen
-    abv: 4.5
-    ibu: 15
-    srm: 6
-    untappd:
-  - name: Elder Betty
-    tag: ELDERBERRY WEISS
-    abv: 5.5
-    ibu: 13
-    srm: 5.5
-    untappd:
