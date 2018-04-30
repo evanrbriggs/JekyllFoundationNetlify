@@ -11,7 +11,7 @@ layout: default
 <div class="row">
 	<div class="large-7 medium-6 small-6 columns">
         <a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}/">
-        	<img width="80" style="float:left" src="https://magichat.net/img/elixirs/labels/{{ elixir.name | slugify | remove: '-' }}.png">
+        	<img width="80" style="float:left" src="{% if elixir.label %}https://magichat.net/img/elixirs/labels/{{ elixir.name | slugify | remove: '-' }}.png{% else %}https://magichat.net/img/elixirs/labels/pilot.png{% endif %}">
         </a>
 		<h2><a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}/">{{ elixir.name }}</a><br><small>{{ elixir.tag }}</small></h2>
 	</div>
