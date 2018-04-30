@@ -1,23 +1,33 @@
 ---
 layout: default
 ---
+
 {{ page.title }}
+
 <hr>
+
 {{ page.intro }}
+
 <hr>
+
 <h2>Currently Pouring</h2>
+
 {% for elixir in page.elixirs %}
 
-<div class="row">
-	<div class="large-7 medium-6 small-6 columns">
-        <a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}/">
-        	<img width="80" style="float:left" src="{% if elixir.label %}https://magichat.net/img/elixirs/labels/{{ elixir.name | slugify | remove: '-' }}.png{% else %}https://magichat.net/img/elixirs/labels/pilot.png{% endif %}">
-        </a>
-		<h2><a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}/">{{ elixir.name }}</a><br><small>{{ elixir.tag }}</small></h2>
+	{% if elixir.pouring == true %}
+
+	<div class="row">
+		<div class="large-7 medium-6 small-6 columns">
+	        <a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}/">
+	        	<img width="80" style="float:left" src="{% if elixir.label %}https://magichat.net/img/elixirs/labels/{{ elixir.name | slugify | remove: '-' }}.png{% else %}https://magichat.net/img/elixirs/labels/pilot.png{% endif %}">
+	        </a>
+			<h2><a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}/">{{ elixir.name }}</a><br><small>{{ elixir.tag }}</small></h2>
+		</div>
+		<div class="large-2 medium-2 small-2 columns"><h2>{{ elixir.abv }}</h2></div>
+		<div class="large-2 medium-2 small-2 columns"><h2>{{ elixir.ibu }}</h2></div>
+		<div class="large-1 medium-2 small-2 columns"><h2>{{ elixir.srm }}</h2></div>
 	</div>
-	<div class="large-2 medium-2 small-2 columns"><h2>{{ elixir.abv }}</h2></div>
-	<div class="large-2 medium-2 small-2 columns"><h2>{{ elixir.ibu }}</h2></div>
-	<div class="large-1 medium-2 small-2 columns"><h2>{{ elixir.srm }}</h2></div>
-</div>
+	
+	{% endif %}
 
 {% endfor %}

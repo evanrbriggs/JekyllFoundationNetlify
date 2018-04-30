@@ -1,7 +1,9 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: master # should we create and tie the netlify cms to it's own branch?
   accept_roles:
+
+display_url: https://magichat.net
 
 media_folder: "lib/img/uploads"
 collections:
@@ -32,9 +34,10 @@ collections:
             name: elixirs
             widget: list
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Tag, name: tag, widget: string}
-              - {label: Label, name: label, widget: image}
-              - {label: ABV, name: abv, widget: string}
-              - {label: IBU, name: ibu, widget: string}
-              - {label: SRM, name: srm, widget: string}
+              - {label: Elixir Name, name: name, widget: string}
+              - {label: Elixir Tagline, name: tag, widget: string}
+              - {label: Elixir ABV, name: abv, widget: string}
+              - {label: Elixir IBU, name: ibu, widget: string}
+              - {label: Elixir SRM, name: srm, widget: string}
+              - {label: Elixir Label, name: label, widget: image}
+              - {label: "Currently Pouring?", name: "pouring", widget: "boolean"}
