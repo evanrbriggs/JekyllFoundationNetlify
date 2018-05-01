@@ -3,19 +3,15 @@ layout: default
 title: Netlify Jekyll CMS
 ---
 
-<h3>What's On Tap <small>( tied to <code>whatsontap.html</code> yaml )</small></h3>
-
+<h3>What's On Tap</h3>
+<div class="row">
 {% for page in site.pages %}
 	{% if page.layout == 'whatsontap' %}
 		{% for elixir in page.elixirs %}
-
-		<a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}"><img src="https://magichat.net/img/elixirs/labels/{{ elixir.name | slugify | remove: '-' }}.png"></a><br>
-
+		<div class="large-3 medium-4 small-6 columns">
+			<a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}"><img src="https://magichat.net/img/elixirs/labels/{{ elixir.name | slugify | remove: '-' }}.png"></a><br>
+		</div>
 		{% endfor %}
 	{% endif %}
 {% endfor %}
-
-<hr> 
-
-<a href="/about/">Whats On Tap</a><br>
-<a href="/survey/">Survey</a>
+</div>
