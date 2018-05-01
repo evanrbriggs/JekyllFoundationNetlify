@@ -8,8 +8,13 @@ title: Netlify Jekyll CMS
 {% for page in site.pages %}
 	{% if page.layout == 'whatsontap' %}
 		{% for elixir in page.elixirs %}
-		<div class="large-3 medium-4 small-6 columns">
+		<div class="large-3 medium-4 small-6 columns text-center">
 			<a href="https://magichat.net/elixirs/{{ elixir.name | slugify | remove: '-' }}"><img src="https://magichat.net/img/elixirs/labels/{{ elixir.name | slugify | remove: '-' }}.png"></a><br>
+			{% if elixir.pouring == true %}
+				Currently Pouring
+			{% else %} 
+				Not Pouring
+			{% endif %}
 		</div>
 		{% endfor %}
 	{% endif %}

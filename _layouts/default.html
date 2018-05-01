@@ -13,15 +13,13 @@
     <div class="row align-middle">
       <div class="large-12 columns">
         {{ content }}
+        <hr> 
+        <a href="/">Home</a> - Grabs all beers<br>
+        <a href="/about/">Whats On Tap</a> - Grabs beers that are toggled "Pouring"<br>
+        <a href="/survey/">Survey</a> - Grabs beers that are toggled "Pouring"
+        <hr>
+        <em><small>Deployed @ {{ site.time | date: "%Y%m%d%M" }} | This page is using <code>{{ page.layout }}.html</code></small></em>
       </div>
-    </div>
-    <div class="row">
-      <hr> 
-      <a href="/">Home</a> - Grabs all beers<br>
-      <a href="/about/">Whats On Tap</a> - Grabs beers that are toggled "Pouring"<br>
-      <a href="/survey/">Survey</a> - Grabs beers that are toggled "Pouring"
-      <hr>
-      <em><small>Deployed @ {{ site.time | date: "%Y%m%d%M" }} | This page is using <code>{{ page.layout }}.html</code></small></em>
     </div>
     <script src="/lib/js/vendor/jquery.js"></script>
     <script src="/lib/js/vendor/what-input.js"></script>
