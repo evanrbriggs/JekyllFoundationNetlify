@@ -6,15 +6,17 @@ title: survey
 <h1>Survey</h1>
 <form id="artifactory-survey" name="Artifactory Survey" method="POST" netlify>
   <label for="Elixir Name">Which beer are you drinking?*</label>
-    <select id="elixir-name" name="Elixir Name" required>
-      <option value="" selected disabled>Select a Beer</option>
+  <select id="elixir-name" name="Elixir Name" required>
+    <option value="" selected disabled>Select a Beer</option>
     {% for page in site.pages %}
       {% if page.layout == 'whatsontap' %}
         {% for elixir in page.elixirs %}
+          {% if elixir.pouring == true %}
           <option value="{{ elixir.name }}">{{ elixir.name }}</option>
+          {% endif %}
         {% endfor %}
-    {% endif %}
-  {% endfor %}
+      {% endif %}
+    {% endfor %}
   </select>
   <input type="submit" text="submit">
 </form>
