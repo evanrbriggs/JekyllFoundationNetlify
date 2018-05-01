@@ -18,7 +18,7 @@
         <a href="/about/">Whats On Tap</a> - Get All Elixirs toggled Pouring | <strong>Displays Labels, ABV, IBUs and SRM.</strong><br>
         <a href="/survey/">Survey</a> - Get All Elixirs toggled Pouring.
         <hr>
-        <em><small>Deployed @ {{ site.time | date: "%Y%m%d%M" }} | This page is using <code>{{ page.layout }}.html</code></small></em>
+        <em><small>Deployed @ {{ site.time | date: "%Y%m%d%M" }} | This page is using <code>{{ page.layout }}.html</code> | blog posts - {% for post in site.posts %}<a href="{{ post.url }}">{{ post.title }}</a> {% endfor %}</small></em>
       </div>
     </div>
     <script src="/lib/js/vendor/jquery.js"></script>
